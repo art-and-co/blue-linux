@@ -14,3 +14,5 @@ jobs:
         with:
           older-than: 1 month
           keep-n-tagged: 5
+    permissions:
+      packages: write
