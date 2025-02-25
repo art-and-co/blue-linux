@@ -1,0 +1,15 @@
+name: ghcr.io clean up
+
+on:
+  schedule:
+    - cron: '05 10 * * 1'  # 10:05am UTC everyday
+  workflow_dispatch:
+
+jobs:
+  clean-up:
+    name: ghcr.io cleanup action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dataaxiom/ghcr-cleanup-action@v1
+        with:
+          dry-run: true
